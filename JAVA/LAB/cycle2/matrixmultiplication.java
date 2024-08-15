@@ -1,3 +1,6 @@
+//program for matrix multiplication
+//krishnapriya v r
+//rollno 37
 import java.util.Scanner;
 class MatixMultiplication
 {
