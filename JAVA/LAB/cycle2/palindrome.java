@@ -1,4 +1,6 @@
 // program to check whether the input string is palindrome or not.
+//krishnapriya v r
+//rollno 37
 import java.util.*;
 class palindrome
 {
