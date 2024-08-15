@@ -1,4 +1,6 @@
 // to find the frequency of a string.
+//krishnapriya v r
+//rollno 37
 import java.util.*;
 class frequency
 {
