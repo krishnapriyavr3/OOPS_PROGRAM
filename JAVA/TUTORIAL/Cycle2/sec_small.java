@@ -8,9 +8,9 @@ class sec_small
 		Scanner s1=new Scanner(System.in);
 		System.out.println("Enter the limit:");
 		n=s1.nextInt();
+		System.out.println("Enter the Element:");
 		for(i=0;i<n;i++)
 		{
-			System.out.println("Enter the Element:");
 			a[i]=s1.nextInt();
 		}
 		for(i=0;i<n;i++)
