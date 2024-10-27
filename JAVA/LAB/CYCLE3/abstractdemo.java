@@ -1,39 +1,36 @@
-import java.util.*;
-abstract class shape
-{
-  int x,y;
-  abstract void area(double x,double y);
+abstract class Shape {
+    abstract int numberOfSides();
 }
-class rectangle extends shape
-{   
-   void area(double x,double y)
-  {
-     System.out.println("Area of rectangle is:"+(x*y));
-  }
+
+class Rectangle extends Shape {
+    @Override
+    public int numberOfSides() {
+        return 4;
+    }
 }
-class circle extends shape
-{
-  void area(double x,double y)
-  {
-    System.out.println("Area of circle is:"+(3.14*x*x));
-  }
+
+class Triangle extends Shape {
+    @Override
+    public int numberOfSides() {
+        return 3;
+    }
 }
-class traingle extends shape
-{
-   void area(double x,double y)
-  {
-     System.out.println("Area of traingle is:"+(0.5*x*y));
-  }
+
+class Hexagon extends Shape {
+    @Override
+    public int numberOfSides() {
+        return 6;
+    }
 }
- public class abstractdemo
-{
-  public static void main(String args[])
-  {
-    rectangle r=new rectangle();
-    r.area(2,5);
-    circle c=new circle();
-    c.area(5,5);
-    traingle t=new traingle();
-    t.area(2,5);
-  }
+
+public class Main {
+    public static void main(String[] args) {
+        Shape rectangle = new Rectangle();
+        Shape triangle = new Triangle();
+        Shape hexagon = new Hexagon();
+
+        System.out.println("Rectangle has " + rectangle.numberOfSides() + " sides.");
+        System.out.println("Triangle has " + triangle.numberOfSides() + " sides.");
+        System.out.println("Hexagon has " + hexagon.numberOfSides() + " sides.");
+    }
 }
