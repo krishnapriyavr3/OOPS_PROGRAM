@@ -1,47 +1,74 @@
- class member
+class Member
 {
-   public String name;
-   public int age;
-   public String phonenumber;
-   public String address;
-   private double salary;
-   
-   public member(String name,int age,String phonenumber,String address,double salary)
-   {
-      this.name=name;
-      this.age=age;
-      this.phonenumber=phonenumber;
-      this.address=address;
-      this.salary=salary;
-   }
-   public void printsalary()
-   {
-     System.out.println("salary"+salary);
-   }
+	String name;
+	int age;
+	long ph_num;
+	String address;
+	double salary;
+	
+	Member(String n,int a,long p,String ad,double s)		// Constructor
+	{
+		this.name=n;
+		this.age=a;
+		this.ph_num=p;
+		this.address=ad;
+		this.salary=s;
+	}
+
+	void print_details()
+	{
+		System.out.print("\nEmployee Details are as:");
+		System.out.print("\nName: " + name);
+		System.out.print("\nAge: " + age);
+        System.out.print("\nAddress: " + address);
+        System.out.print("\nPhone number: " + ph_num);
+    }
+
+	void print_Salary()
+	{
+		System.out.print("\nSalary: " + this.salary);
+	}
 }
- class employee extends member
+
+class Employee extends Member
 {
-   public employee(String name,int age,String phonenumber,String address,double salary)
-   {
-      super(name,age,phonenumber,address,salary);
-   }
+	String specialization="Market Research";
+	String department="Marketing and Sales";
+	
+	Employee()				//Constructor
+	{
+		super("John",32,9876767876l,"Xyz",95140.5);			//Calling Constructor of Parent Class
+	}
 }
- class manager extends member
+
+class Manager extends Member
 {
-  private String department;
-  public manager(String name,int age,String phonenumber,String address,double salary,String department)
-  {
-     super(name,age,phonenumber,address,salary);
-     this.department=department;
-   }
+	String specialization="Market Research";
+	String department="Marketing and Sales";
+
+	Manager()				// Consructor
+	{
+		super("Johnn",31,9876447876l,"Abc",75840.5);		//Calling Constructor of Parent Class
+	}
 }
-public class main{
-public static void main(String args[])
+
+class EmployeeInheritence
 {
-  employee e=new employee("krishnapriya",19,"8281619025","Home",50000);
-  manager m=new manager("Ronnie",30,"3258741695","Office",100000,"CSE");
-  e.printsalary();
-  m.printsalary();
+	public static void main(String args[])
+	{
+		Employee e = new Employee();
+		Manager m = new Manager();
+		
+		System.out.print("\n----Employee details----\n");
+		e.print_details();
+		System.out.print("\nSpecialization: "+e.specialization);
+		System.out.print("\nDepartment: "+e.department);
+		e.print_Salary();
+
+		System.out.print("\n----Manager details----\n");
+		m.print_details();
+		System.out.print("\nSpecialization: "+m.specialization);
+		System.out.print("\nDepartment: "+m.department);
+		m.print_Salary();
+	}
 }
-}
-   
